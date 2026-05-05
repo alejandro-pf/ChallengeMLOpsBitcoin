@@ -1,0 +1,16 @@
+stages:
+  load_data:
+    cmd: python3 src/load_data.py
+    deps:
+      - src/load_data.py
+      - Bitcoin.csv
+    outs:
+      - data/raw/bitcoin_raw.csv
+
+  train:
+    cmd: python3 src/train.py
+    deps:
+      - data/raw/bitcoin_raw.csv
+      - src/train.py
+    outs:
+      - models/model.pkl
