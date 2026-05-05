@@ -49,6 +49,14 @@ Los resultados de los 2 modelos entrenados inicialmente son los siguientes:
 
 Gracias a MLFlow de un vistazo se pueden ver todas las características del modelo, tanto en profundidad y estimadores como las métricas resultantes del entrenamiento, y se puede guiar la decisión de los futuros modelos en base a esto. Mi siguiente opción, después de ver los resultados y el tiempo de entrenamiento, sería mantener el número de estimadores pero aumentar la profundidad.
 
+Este tercer modelo que he entrenado, con 100 estimadores y una profundidad de 15, tiene los siguientes resultados:
+
+    RandomForest_est_100_depth_15
+      RMSE: 21868.30498298366
+      MAE: 13737.302747205762
+              
+Podemos ver que el modelo mejora, y va en buena dirección, pero los pasos son muy pequeños. Habría que probar modelos más grandes, tal vez no de profundidad, pero si de estimadores.
+
 ## Puesta en producción
 Para poner el modelo en producción he usado FastAPI con la interfaz de SwaggerUI, lanzándolo con uvicorn:
  
