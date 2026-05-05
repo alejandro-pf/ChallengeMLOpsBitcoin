@@ -1,0 +1,34 @@
+schema: '2.0'
+stages:
+  load_data:
+    cmd: python3 src/load_data.py
+    deps:
+    - path: Bitcoin.csv
+      hash: md5
+      md5: 47c341345413fdc82393ad2f5a64a0e2
+      size: 395648297
+    - path: src/load_data.py
+      hash: md5
+      md5: 5fdc21fb6cc776afbe2ddf4c09621e86
+      size: 495
+    outs:
+    - path: data/raw/bitcoin_raw.csv
+      hash: md5
+      md5: eb176945a2dc0bf48260d434f0319e7d
+      size: 395659529
+  train:
+    cmd: python3 src/train.py
+    deps:
+    - path: data/raw/bitcoin_raw.csv
+      hash: md5
+      md5: eb176945a2dc0bf48260d434f0319e7d
+      size: 395659529
+    - path: src/train.py
+      hash: md5
+      md5: 6b2189f9b6f9e4e915b242505a8f1e2e
+      size: 2009
+    outs:
+    - path: models/model.pkl
+      hash: md5
+      md5: 686e864fc132055100db995ab6a57267
+      size: 14765298
