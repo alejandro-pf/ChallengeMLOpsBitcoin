@@ -9,20 +9,20 @@ stages:
       size: 395648297
     - path: src/load_data.py
       hash: md5
-      md5: 5fdc21fb6cc776afbe2ddf4c09621e86
-      size: 495
+      md5: a7764714d798e2d0dbb5f1f13fb04aac
+      size: 1966
     outs:
     - path: data/raw/bitcoin_raw.csv
       hash: md5
-      md5: eb176945a2dc0bf48260d434f0319e7d
-      size: 395659529
+      md5: b33fc4850ec2d3ff13dd55538e8cbf8b
+      size: 503206
   train:
     cmd: python3 src/train.py
     deps:
     - path: data/raw/bitcoin_raw.csv
       hash: md5
-      md5: eb176945a2dc0bf48260d434f0319e7d
-      size: 395659529
+      md5: b33fc4850ec2d3ff13dd55538e8cbf8b
+      size: 503206
     - path: src/train.py
       hash: md5
       md5: 879c5d61203ddfda8d1fff499f8830cf
@@ -30,5 +30,5 @@ stages:
     outs:
     - path: models/model.pkl
       hash: md5
-      md5: 6ad895b027ce6e0d551720312a67854b
-      size: 373011414
+      md5: fa514b98eb2c79d7ad8782218a65256e
+      size: 29004878
