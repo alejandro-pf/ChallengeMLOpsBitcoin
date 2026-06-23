@@ -2,7 +2,7 @@
 
 ## Introducción
 
-Para la realización de este challenge he escogido el DataSet “Bitcoin Historical Data”, que contiene actualizaciones minuto a minuto, desde 2021, del precio de Apertura (Open), Alto (High), Bajo (Low) y Cierre (Close), junto con el volumen de ventas, del Bitcoin.
+Para la realización de este challenge he escogido el DataSet “Bitcoin Historical Data”, que contiene actualizaciones minuto a minuto, desde 2012, del precio de Apertura (Open), Alto (High), Bajo (Low) y Cierre (Close), junto con el volumen de ventas, del Bitcoin.
 
 El DataSet puede encontrarse aquí:
 https://www.kaggle.com/datasets/mczielinski/bitcoin-historical-data?resource=download
