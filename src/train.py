@@ -16,8 +16,8 @@ def train_model(n_estimators=100, max_depth=10):
         df = pd.read_csv("data/raw/bitcoin_raw.csv")
         
         
-        # Quiero predecir el siguiente minuto en función de los datos de "este minuto", por lo tanto el target será el precio 
-        # del siguiente minuto, así el modelo entrena con los datos del minuto presente para predecir el siguiente.
+        # Quiero predecir el siguiente minuto en función de los datos de "este minuto" (ahora día), por lo tanto el target será el precio 
+        # del siguiente minuto (ahora día), así el modelo entrena con los datos del minuto (ahora día) presente para predecir el siguiente.
         
         df['target'] = df['Close'].shift(-1)
         df = df.dropna()
@@ -61,4 +61,4 @@ def train_model(n_estimators=100, max_depth=10):
 
 if __name__ == "__main__":
 
-    train_model(n_estimators=100, max_depth=15)
+    train_model(n_estimators=100, max_depth=10)
