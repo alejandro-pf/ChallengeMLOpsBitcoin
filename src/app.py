@@ -7,7 +7,7 @@ from pydantic import BaseModel
 with open("models/model.pkl", "rb") as f:
     model = pickle.load(f)
 
-app = FastAPI()
+app = FastAPI(title="Predicción precios de Bitcoin")
 
 
 class BitcoinData(BaseModel):
@@ -29,4 +29,4 @@ def predict(data: BitcoinData):
 
     prediction = model.predict(df)
     
-    return {"prediction_next_minute_close": float(prediction[0])}
+    return {"prediction_next_close": float(prediction[0])}
